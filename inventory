@@ -1,1 +1,2 @@
 172.16.142.217 ansible_user=lohit
+ansible_host = 172.16.139.235 ansible_user=ansible_server_user ansible_pass=M@bile12
