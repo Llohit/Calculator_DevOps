@@ -24,14 +24,13 @@ public class Calculator {
         scanner.nextLine();
 
         do {
-            System.out.println("Calculator-DevOps, Choose to perform operation");
+            System.out.println("Choose the operations from below:");
             System.out.print(
-                "Enter 1 to find Factorial\n" +
-                "Enter 2 to find Square Root\n" +
-                "Enter 3 to find Power\n" +
-                "Enter 4 to find Natural Logarithm\n" +
-                "Enter any other input to Exit\n" +
-                "Enter your choice: "
+                "1.Factorial\n" +
+                "2.Square Root\n" +
+                "3.Power\n" +
+                "4.Natural Logarithm\n" +
+                "5.Exit\n"
             );
 
             int choice;
@@ -157,13 +156,13 @@ public class Calculator {
     }
 
     public int factorial(int number1) {
-        logger.info("[FACTORIAL] - " + number1);
+        logger.info("Factorial of :" + number1);
 
         int result = 1;
         for(int i = 1; i <= number1; i++)
             result *= i;
 
-        logger.info("[RESULT - FACTORIAL] - " + result);
+        logger.info("Factorial is: " + result);
         return result;
     }
 
