@@ -17,8 +17,6 @@ public class Calculator {
         double d_number1, d_number2;
         int i_number1;
 
-        // When the Docker container is started in the background via Ansible and you attach your terminal to it,
-        // the initial application System.out.println statements are wiped out, to avoid that we use this stop-gap fix
         // Only enter the application once the user has pressed Enter key on the terminal.
         System.out.println("Press Enter key to start the application\n");
         scanner.nextLine();
@@ -33,18 +31,17 @@ public class Calculator {
                 "5.Exit\n"
             );
 
-            int choice;
-
-            try {
-                choice = scanner.nextInt();
-            }
-            catch (InputMismatchException error) {
-                System.out.println("Exiting....");
+            int ch;
+            
+            ch = scanner.nextInt();
+            if(ch==5){
+                System.out.println("THANK YOU!!...Exiting");
                 scanner.close();
                 return;
             }
 
-            switch (choice) {
+    
+            switch (ch) {
                 case 1:
                     // find factorial
                     i_number1 = -1;
@@ -52,17 +49,17 @@ public class Calculator {
                     // Keep executing do-while loop till user enters a non-negative integer
                     while (i_number1 < 0) {
                         try {
-                            System.out.print("Enter a non-negative integer : ");
+                            System.out.print("Enter a number : ");
                             i_number1 = scanner.nextInt();
 
                             if (i_number1 < 0)
-                                System.out.println("Factorial is only applicable for non-negative integers");
+                                System.out.println("Invalid input....Please try again!!");
                             else
                                 System.out.println("Factorial of " + i_number1 + " is: " + calculator.factorial(i_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
-                            System.out.println("Factorial is only applicable for non-negative integers");
+                            System.out.println("Invalid input....Please try again!!");
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
@@ -76,17 +73,17 @@ public class Calculator {
                     // Keep executing do-while loop till user enters a non-negative number
                     while (d_number1 < 0) {
                         try {
-                            System.out.print("Enter a non-negative number: ");
+                            System.out.print("Enter a number :  ");
                             d_number1 = scanner.nextDouble();
 
                             if (d_number1 < 0)
-                                System.out.println("Square Root is only applicable for non-negative numbers");
+                                System.out.println("Invalid input....Please try again!!");
                             else
                                 System.out.println("Square Root of " + d_number1 + " is: " + calculator.squareRoot(d_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
-                            System.out.println("Square Root is only applicable for non-negative numbers");
+                            System.out.println("Invalid input....Please try again!!");
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
@@ -103,7 +100,7 @@ public class Calculator {
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
-                            System.out.println("Non-numeric input is not valid");
+                            System.out.println("Invalid input....Please try again!!");
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
@@ -114,7 +111,7 @@ public class Calculator {
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
-                            System.out.println("Non-numeric input is not valid");
+                            System.out.println("Invalid input....Please try again!!");
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
@@ -134,13 +131,13 @@ public class Calculator {
                             d_number1 = scanner.nextDouble();
 
                             if (d_number1 <= 0)
-                                System.out.println("Natural Logarithm is only applicable for positive numbers");
+                                System.out.println("Invalid input....Please try again!!");
                             else
                                 System.out.println("Natural Logarithm of " + d_number1 + " is: " + calculator.naturalLog(d_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
-                            System.out.println("Natural Logarithm is only applicable for positive numbers");
+                            System.out.println("Invalid input....Please try again!!");
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
@@ -156,18 +153,18 @@ public class Calculator {
     }
 
     public int factorial(int number1) {
-        logger.info("Factorial of :" + number1);
+        logger.info("[Factorial of :]" + number1);
 
         int result = 1;
         for(int i = 1; i <= number1; i++)
             result *= i;
 
-        logger.info("Factorial is: " + result);
+        logger.info("[Factorial is: ]" + result);
         return result;
     }
 
     public double squareRoot(double number1) {
-        logger.info("[SQ ROOT] - " + number1);
+        logger.info("[Square Root] " + number1);
         double result = Math.sqrt(number1);
         logger.info("[RESULT - SQ ROOT] - " + result);
         return result;
