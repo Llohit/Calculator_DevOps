@@ -18,7 +18,7 @@ public class Calculator {
         int i_number1;
 
         // Only enter the application once the user has pressed Enter key on the terminal.
-        System.out.println("Press Enter key to start the applicationnn\n");
+        System.out.println("Press Enter key to start the applicationnnnnn\n");
         scanner.nextLine();
 
         do {
