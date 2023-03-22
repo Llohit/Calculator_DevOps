@@ -35,7 +35,7 @@ public class Calculator {
             
             ch = scanner.nextInt();
             if(ch==5){
-                System.out.println("THANK YOU!!...Exitinnng");
+                System.out.println("THANK YOU!!...Exiting");
                 scanner.close();
                 return;
             }
@@ -49,7 +49,7 @@ public class Calculator {
                     // Keep executing do-while loop till user enters a non-negative integer
                     while (i_number1 < 0) {
                         try {
-                            System.out.print("Enter a number please : ");
+                            System.out.print("Enter a numberr: ");
                             i_number1 = scanner.nextInt();
 
                             if (i_number1 < 0)
