@@ -18,7 +18,7 @@ public class Calculator {
         int i_number1;
 
         // Only enter the application once the user has pressed Enter key on the terminal.
-        System.out.println("Press Enter key to start the applicationnnnnn\n");
+        System.out.println("Press Enter key to start the application\n");
         scanner.nextLine();
 
         do {
@@ -49,7 +49,7 @@ public class Calculator {
                     // Keep executing do-while loop till user enters a non-negative integer
                     while (i_number1 < 0) {
                         try {
-                            System.out.print("Enter a number : ");
+                            System.out.print("Enter a number please : ");
                             i_number1 = scanner.nextInt();
 
                             if (i_number1 < 0)
