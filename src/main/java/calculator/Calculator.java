@@ -35,7 +35,7 @@ public class Calculator {
             
             ch = scanner.nextInt();
             if(ch==5){
-                System.out.println("THANK YOU!!...Exiting");
+                System.out.println("THANK YOU!!...Exitinnng");
                 scanner.close();
                 return;
             }
