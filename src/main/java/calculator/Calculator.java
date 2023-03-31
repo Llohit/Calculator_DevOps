@@ -22,7 +22,7 @@ public class Calculator {
         scanner.nextLine();
 
         do {
-            System.out.println("Choose the operations from below:");
+            System.out.println("Choose the operations from beloww:");
             System.out.print(
                 "1.Factorial\n" +
                 "2.Square Root\n" +
