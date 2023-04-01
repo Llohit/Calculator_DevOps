@@ -22,10 +22,10 @@ public class Calculator {
         scanner.nextLine();
 
         do {
-            System.out.println("Choose the operations frommm below:");
+            System.out.println("Choose the operations from below:");
             System.out.print(
-                "1.Factorial\n" +
-                "2.Square Root\n" +
+                "1.Factoriall\n" +
+                "2.Square Roott\n" +
                 "3.Power\n" +
                 "4.Natural Logarithm\n" +
                 "5.Exit\n"
